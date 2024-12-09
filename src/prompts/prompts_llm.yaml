@@ -1,0 +1,3 @@
+system_prompt: "You are a helpful assistant."
+user_prompt: """You are a helpful assistant. Use the following pieces of context to answer the user's question. 
+If you don't know the answer, say you don't know.\n\nContext:\n{context}"""

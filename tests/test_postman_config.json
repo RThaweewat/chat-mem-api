@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "234e4214-83fc-4608-853e-61f8f1b60f1f",
+		"name": "My Chat App",
+		"description": "Collection for testing My Chat App API with memory and vectorstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14439287"
+	},
+	"item": [
+		{
+			"name": "Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/healthcheck"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Docs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/path/to/your/document.pdf"
+						}
+					]
+				},
+				"url": "{{base_url}}/upload-docs"
+			},
+			"response": []
+		},
+		{
+			"name": "Chat - Start conversation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"Hello, Who is Arcfusion's CEO?\"\n}"
+				},
+				"url": "{{base_url}}/chat"
+			},
+			"response": []
+		},
+		{
+			"name": "Chat - Follow up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"What was my name again?\",\n  \"thread_id\": \"default_thread\"\n}"
+				},
+				"url": "{{base_url}}/chat"
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Conversation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/reset?thread_id=default_thread",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reset"
+					],
+					"query": [
+						{
+							"key": "thread_id",
+							"value": "default_thread"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Vector DB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "{{base_url}}/reset-db"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		}
+	]
+}

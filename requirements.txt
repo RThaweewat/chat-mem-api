@@ -1,0 +1,16 @@
+fastapi==0.115.6
+langchain==0.3.10
+langchain-chroma==0.1.4
+langchain-core==0.3.22
+langchain-openai==0.2.11
+langgraph==0.2.56
+loguru==0.7.3
+opik==1.2.3
+pydantic==2.9.2
+pytest==8.3.4
+python-dotenv==1.0.1
+PyYAML==6.0.2
+textract==1.6.5
+typing_extensions==4.12.2
+uvicorn==0.32.1
+python-multipart==0.0.19
