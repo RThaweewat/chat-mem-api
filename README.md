@@ -2,11 +2,11 @@
 
 This project provides a production-grade conversational API similar to ChatGPT, but with openstack-based features such as:
 
-- Document ingestion and retrieval with [textract](https://textract.readthedocs.io/en/stable/) + [ChromaDB](https://docs.trychroma.com/getting-started)
-- Memory functionality to maintain conversational state across messages with [LangGraph](https://python.langchain.com/docs/versions/migrating_memory/)
-- Integration with [Opik](https://www.comet.com/opik) for tracing, custom prompt templates and evaluating LLM calls.
-- Deployment-ready with Docker, FastAPI, and logging (Loguru).
-- Example tests (both unit and integration) and Postman collections for easy verification.
+- 📄 Document ingestion and retrieval with [textract](https://textract.readthedocs.io/en/stable/) + [ChromaDB](https://docs.trychroma.com/getting-started)
+- 🧠 Memory functionality to maintain conversational state across messages with [LangGraph](https://python.langchain.com/docs/versions/migrating_memory/)
+- 🔗 Integration with [Opik](https://www.comet.com/opik) for tracing, custom prompt templates and evaluating LLM calls.
+- 🚀 Deployment-ready with Docker, FastAPI, and logging (Loguru).
+- 🧪 Example tests (both unit and integration) and Postman collections for easy verification.
 
 **Key Features:**
 
